@@ -1,0 +1,208 @@
+/* Koyu tema genel ayarları */
+body {
+    background-color: #181818; /* Koyu arka plan */
+    color: #e0e0e0; /* Açık yazı rengi */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ana container */
+.main {
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 25vh;
+    position: relative;
+    background-color: #181818; /* Koyu arka plan */
+}
+
+/* Navbar */
+.main .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 20px;
+    color: #ffffff; /* Beyaz yazı rengi */
+}
+
+/* Navbar görselleri */
+.main .nav img {
+    width: 50px;
+    border-radius: 50px;
+}
+
+/* Ana içerik container'ı */
+.main-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Greet kısmı */
+.main-container .greet {
+    margin: 50px 0px;
+    font-size: 56px;
+    color: #c4c7c5;
+    font-weight: 600;
+}
+
+/* Gradientli yazı */
+.main .greet span {
+    background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Kartlar */
+.main .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+/* Her bir kart */
+.main .card {
+    height: 200px;
+    padding: 15px;
+    background-color: #2d2d2d; /* Koyu gri arka plan */
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Karttaki ikon */
+.main .card img {
+    width: 35px;
+    padding: 5px;
+    position: absolute;
+    border-radius: 20px;
+    bottom: 10px;
+    right: 10px;
+    background: white;
+}
+
+/* Kart metni */
+.main .card p {
+    color: #e0e0e0; /* Açık gri yazı rengi */
+    font-size: 17px;
+}
+
+/* Kart hover efekti */
+.main .card:hover {
+    background-color: #444444; /* Daha koyu gri hover efekti */
+}
+
+/* Bottom info */
+.main-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: auto;
+}
+
+/* Arama kutusu */
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #333333; /* Koyu gri arka plan */
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+/* Arama kutusu ikonları */
+.search-box img {
+    width: 24px;
+    cursor: pointer;
+}
+
+/* Arama kutusu input */
+.search-box input {
+    flex: 1;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 8px;
+    font-size: 18px;
+    color: #ffffff; /* Beyaz yazı rengi */
+}
+
+/* Bottom info metni */
+.main .bottom-info {
+    font-size: 13px;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: 300;
+    color: #bbb; /* Açık gri metin */
+}
+
+/* Sonuçlar bölmesi */
+.result {
+    padding: 0px 5%;
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+
+/* Scrollbar gizleme */
+.result::-webkit-scrollbar {
+    display: none;
+}
+
+/* Sonuç başlığı */
+.result-title {
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Sonuç başlığı görseli */
+.result img {
+    width: 40px;
+    border-radius: 50px;
+}
+
+/* Sonuç metni */
+.result-data {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+
+/* Yükleniyor animasyonu */
+.loader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.loader hr {
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right, #b1d5ee, #c953e98a, #9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+    animation: loader 4s infinite linear;
+}
+
+@keyframes loader {
+    0% {
+        background-position: -800px 0px;
+    }
+    100% {
+        background-position: 800px 0px;
+    }
+}
+
+/* Sonuç metni */
+.result-data p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #ddd; /* Açık gri metin */
+}
