@@ -50,7 +50,7 @@ const Main = () => {
 								}
 							>
 								<p>Fotosentez sürecini basit terimlerle açıklayın.</p>
-								<img src={assets.message_icon} alt="" />
+								<img src={assets.messagee_icon} alt="" />
 							</div>
 							<div
 								className="card"
